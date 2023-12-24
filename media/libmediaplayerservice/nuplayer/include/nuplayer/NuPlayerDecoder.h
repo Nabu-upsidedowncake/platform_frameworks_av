@@ -77,7 +77,6 @@ private:
     sp<AMessage> mOutputFormat;
     sp<MediaCodec> mCodec;
     sp<ALooper> mCodecLooper;
-    sp<AMessage> mFormat;
 
     List<sp<AMessage> > mPendingInputMessages;
 
@@ -142,8 +141,6 @@ private:
     void notifyResumeCompleteIfNecessary();
 
     void onReleaseCrypto(const sp<AMessage>& msg);
-
-    nsecs_t mMsgTime;
 
     DISALLOW_EVIL_CONSTRUCTORS(Decoder);
 };
